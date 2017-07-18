@@ -6,7 +6,6 @@ session_start();
 $client = new Google_Client();
 $client->setAuthConfig('client_secrets.json');
 $client->addScope('https://www.googleapis.com/auth/admin.directory.group');
-$client->addScope('https://www.googleapis.com/auth/admin.directory.user');
 
 if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   $client->setAccessToken($_SESSION['access_token']);
